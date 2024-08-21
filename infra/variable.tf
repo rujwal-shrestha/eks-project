@@ -17,3 +17,15 @@ variable "cluster_version" {
 variable "ami_release_version" {
   description = "AMI release version"
 }
+
+variable "min_size" {
+  description = "Min size of nodes"
+}
+
+variable "max_size" {
+  description = "Max size of nodes"
+}
+
+variable "desired_size" {
+  description = "Desired size of nodes"
+}

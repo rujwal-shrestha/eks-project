@@ -36,18 +36,13 @@ module "eks" {
       force_update_version = true
       release_version      = var.ami_release_version
 
-      min_size     = 3
-      max_size     = 6
-      desired_size = 3
+      min_size     = local.eks.min_size
+      max_size     = local.eks.max_size
+      desired_size = local.eks.desired_size
 
       update_config = {
         max_unavailable_percentage = 50
       }
-
-      labels = {
-        workshop-default = "yes"
-      }
     }
   }
-
 }
